@@ -298,7 +298,7 @@ function renderTourShows() {
 
   const pathPrefix = window.location.pathname.includes('/pages/') ? '../assets/images/shows/' : 'assets/images/shows/';
 
-  container.innerHTML = tourShows.map(show => {
+  container.innerHTML = tourShows.slice(0, 6).map(show => {
     const dateFormatted = new Date(show.date).toLocaleDateString('en-US', {
       weekday: 'short',
       month: 'short',
