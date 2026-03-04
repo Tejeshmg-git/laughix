@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/logo/logo-main.png">
+    <title>404 — Joke Not Found | LAUGHIX</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        body,
+        html {
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .error-page {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            padding: 40px;
+            background: transparent;
+        }
+
+        .brand-name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 8px;
+            color: #fff;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            text-transform: uppercase;
+        }
+
+        .brand-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 15px rgba(124, 58, 237, 0.5));
+        }
+
+        .error-code {
+            font-size: clamp(8rem, 20vw, 15rem);
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, #7C3AED, #00D4FF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 30px rgba(124, 58, 237, 0.3));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .error-message h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .error-message p {
+            color: #A0A0B8;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .futuristic-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            border-radius: 50%;
+            z-index: -1;
+            animation: rotate 20s linear infinite;
+        }
+
+        .futuristic-circle::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background: #00D4FF;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #00D4FF;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .btn-glitch {
+            position: relative;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            background: linear-gradient(135deg, #7C3AED, #00D4FF);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-glitch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.4);
+        }
+
+        /* Ambient particles simulation */
+        .particle {
+            position: absolute;
+            background: rgba(0, 212, 255, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: moveUp 10s linear infinite;
+        }
+
+        @keyframes moveUp {
+            from {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(-100px);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animated-bg"></div>
+
+    <div class="futuristic-circle"></div>
+    <div class="futuristic-circle" style="width: 700px; animation-duration: 30s; animation-direction: reverse;"></div>
+
+    <div class="error-page">
+        <div class="brand-name">
+            <img src="../assets/images/logo/logo-main.png" alt="LAUGHIX Logo" class="brand-logo">
+            LAUGHIX
+        </div>
+        <div class="error-code">404</div>
+        <div class="error-message">
+            <h1>Oops! The joke's on us.</h1>
+            <p>The page you're looking for was either heckled off the stage or never existed in the first place.</p>
+            <a href="../index.html" class="btn-glitch">
+                <i class="fa-solid fa-house-chimney"></i> Return Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Generate some background particles -->
+    <script>
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            const size = Math.random() * 5 + 2 + 'px';
+            particle.style.width = size;
+            particle.style.height = size;
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.animationDuration = Math.random() * 5 + 5 + 's';
+            particle.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(particle);
+        }
+    </script>
+</body>
+
+</html>

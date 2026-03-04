@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/logo/logo-main.png">
+    <title>LAUGHIX — Home V2 | Structured Layout</title>
+    <meta name="description"
+        content="LAUGHIX global comedy tour — alternative structured homepage design. Explore shows, get tickets, and experience world-class stand-up comedy.">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../assets/images/logo/logo-main.png" alt="LAUGHIX Logo" class="brand-logo">
+                LAUGHIX
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <button class="nav-back" id="nav-back">
+                    <i class="fa-solid fa-arrow-left"></i> Back
+                </button>
+                <div class="nav-logo mobile-only">
+                    <img src="../assets/images/logo/logo-main.png" alt="LAUGHIX Logo">
+                    <span>LAUGHIX</span>
+                </div>
+                <a href="../index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="shows.html"><i class="fa-solid fa-ticket"></i> Shows</a>
+                <a href="experience.html"><i class="fa-solid fa-bolt"></i> Experience</a>
+                <a href="shop.html"><i class="fa-solid fa-bag-shopping"></i> Shop</a>
+                <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+                <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+                <hr class="mobile-only">
+                <a href="../index.html" class="mobile-only v2-link">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Try V1 Design
+                </a>
+                <a href="login.html" class="mobile-only login-link">
+                    <i class="fa-solid fa-user"></i> Login
+                </a>
+            </div>
+
+            <div class="nav-controls">
+                <a href="../index.html" class="nav-btn alt-design desktop-only">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> V1 Design
+                </a>
+                <a href="login.html" class="nav-icon desktop-only" aria-label="Login">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SPLIT ===== -->
+    <section class="hero-split" id="hero">
+        <div class="container">
+            <div class="hero-split-text" data-aos="fade-right">
+                <h1>The World's Funniest <span>Comedy Tour</span></h1>
+                <p>From New York to Tokyo, LAUGHIX is bringing down the house in 50+ cities. Get your tickets before
+                    they sell out.</p>
+                <div class="hero-buttons">
+                    <a href="shows.html" class="btn btn-primary">
+                        <i class="fa-solid fa-ticket"></i> Get Tickets
+                    </a>
+                    <a href="experience.html" class="btn btn-outline">
+                        <i class="fa-solid fa-play"></i> Watch Highlights
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-split-image" data-aos="fade-left">
+                <div class="image-wrapper">
+                    <img src="../assets/images/Homev2/HeroImage.jpg" alt="Laughix World Tour">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== MERCH PREVIEW (UNIQUE TO V2) ===== -->
+    <section class="merch-preview-section" id="merch-preview">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="label">Official Shop</span>
+                <h2>Fans' Choice Merch</h2>
+                <p>Rep the tour wherever you go. Exclusive drops available only for a limited time.</p>
+            </div>
+
+            <div class="merch-grid">
+                <!-- Merch Item 1 -->
+                <div class="merch-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="merch-image">
+                        <img src="../assets/images/Homev2/tshirt.jpg" alt="Laughix Classic Tee">
+                        <span class="merch-badge">Bestseller</span>
+                    </div>
+
+                    <div class="merch-info">
+                        <h3>Laughix Classic Tee</h3>
+                        <div class="merch-price">$29.99</div>
+                        <a href="shop.html" class="btn btn-outline btn-small">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Merch Item 2 -->
+                <div class="merch-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="merch-image">
+                        <img src="../assets/images/Homev2/Hoodie.jpg" alt="World Tour Hoodie">
+                        <span class="merch-badge">Limited</span>
+                    </div>
+
+                    <div class="merch-info">
+                        <h3>World Tour Hoodie</h3>
+                        <div class="merch-price">$54.99</div>
+                        <a href="shop.html" class="btn btn-outline btn-small">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Merch Item 3 -->
+                <div class="merch-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="merch-image">
+                        <img src="../assets/images/Homev2/Snapback.jpg" alt="Signature Snapback">
+                    </div>
+
+                    <div class="merch-info">
+                        <h3>Signature Snapback</h3>
+                        <div class="merch-price">$24.99</div>
+                        <a href="shop.html" class="btn btn-outline btn-small">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="shop.html" class="btn btn-primary">
+                    <i class="fa-solid fa-bag-shopping"></i> Visit Full Store
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== LIVE THE HYPE (GALLERY PREVIEW) ===== -->
+    <section class="home-gallery-preview" id="gallery-preview">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="label">The Vibe</span>
+                <h2>Live the Hype</h2>
+                <p>A sneak peek into the electrifying atmosphere of our recent tour stops.</p>
+            </div>
+
+            <div class="home-gallery-grid">
+                <div class="hg-item" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="hg-placeholder"><img src="../assets/images/Homev2/GalleryImg-01.jpg" alt="Gallery 1">
+                    </div>
+
+                    <div class="hg-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="hg-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="hg-placeholder"><img src="../assets/images/Homev2/GalleryImg-02.jpg" alt="Gallery 2">
+                    </div>
+
+                    <div class="hg-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="hg-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="hg-placeholder"><img src="../assets/images/Homev2/GalleryImg-03.jpg" alt="Gallery 3">
+                    </div>
+
+                    <div class="hg-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="hg-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="hg-placeholder"><img src="../assets/images/Homev2/GalleryImg-04.jpg" alt="Gallery 4">
+                    </div>
+
+                    <div class="hg-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="experience.html" class="btn btn-outline">
+                    <i class="fa-solid fa-images"></i> View Full Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FAQ SECTION (UNIQUE TO V2) ===== -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="label">Support</span>
+                <h2>Got Questions?</h2>
+                <p>Everything you need to know about tickets, venues, and the Laughix experience.</p>
+            </div>
+
+            <div class="faq-grid" data-aos="fade-up">
+                <div class="faq-item">
+                    <h3>How do I book group tickets?</h3>
+                    <p>For groups of 10 or more, please contact our support team directly for special rates and seating
+                        arrangements.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there an age restriction for the shows?</h3>
+                    <p>While we recommend a 16+ audience due to themes, age restrictions vary by venue. Please check the
+                        specific show page for details.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What happens if a show is postponed?</h3>
+                    <p>Your tickets will automatically be valid for the new date. If you can't make it, a full refund
+                        will be available.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I record the performance?</h3>
+                    <p>To ensure the best experience for everyone, professional recording equipment is strictly
+                        prohibited. Phones are allowed but discouraged during the set.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== THE STORY (UNIQUE TO V2) ===== -->
+    <section class="bio-spotlight-section" id="story">
+        <div class="container">
+            <div class="bio-grid">
+                <div class="bio-image" data-aos="fade-right">
+                    <div class="image-inner">
+                        <img src="../assets/images/Homev2/StoryImg.webp" alt="The Journey of Laughix">
+                    </div>
+                </div>
+
+                <div class="bio-text" data-aos="fade-left">
+                    <span class="label">The Journey</span>
+                    <h2>More Than Just Laughs</h2>
+                    <p>Laughix started in the back of small comedy clubs and grew into a global phenomenon. It’s a story
+                        of persistence, raw humor, and a deep connection with the audience.</p>
+                    <p>Every set is a reflection of the world around us — chaotic, absurd, and undeniably funny.</p>
+                    <a href="about.html" class="btn btn-outline">
+                        <i class="fa-solid fa-user-tie"></i> Read Full Bio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-box" data-aos="zoom-in">
+                <h2>Don't Miss the Laughs</h2>
+                <p>Secure your spot at the most unforgettable comedy experience of your lifetime!</p>
+                <a href="shows.html" class="btn">
+                    <i class="fa-solid fa-ticket"></i> Book Your Tickets Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="container">
+            <div class="newsletter-box" data-aos="fade-up">
+                <h2>Join the LAUGHIX Family</h2>
+                <p>Subscribe for exclusive tour updates, merch drops, and behind-the-scenes content.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="navbar-brand">
+                        <img src="../assets/images/logo/logo-main.png" alt="LAUGHIX Logo" class="brand-logo">
+                        LAUGHIX
+                    </a>
+                    <p>High-energy stand-up comedy touring across the world. Laugh Hard. Live Louder.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col-quick">
+                    <h4>Quick Links</h4>
+                    <a href="../index.html">Home</a>
+                    <a href="shows.html">Shows</a>
+                    <a href="experience.html">Experience</a>
+                    <a href="shop.html">Shop</a>
+                </div>
+
+                <!-- Column 3: Company -->
+                <div class="footer-col-company">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="coming-soon.html">Coming Soon</a>
+                    <a href="404.html">404 Error</a>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p class="footer-newsletter-text">Get updates on new tour dates, exclusive shows, and merch drops.
+                    </p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LAUGHIX. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

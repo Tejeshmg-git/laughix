@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/images/logo/logo-main.png">
+  <title>LAUGHIX — Where Laughter Hits Different</title>
+  <meta name="description"
+    content="LAUGHIX global stand-up comedy tour. Get tickets for the most electrifying comedy experience around the world. Laugh Hard. Live Louder.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Animated Background -->
+  <div class="animated-bg"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/images/logo/logo-main.png" alt="LAUGHIX Logo" class="brand-logo">
+        LAUGHIX
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <button class="nav-back" id="nav-back">
+          <i class="fa-solid fa-arrow-left"></i> Back
+        </button>
+        <div class="nav-logo mobile-only">
+          <img src="assets/images/logo/logo-main.png" alt="LAUGHIX Logo">
+          <span>LAUGHIX</span>
+        </div>
+        <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="pages/shows.html"><i class="fa-solid fa-ticket"></i> Shows</a>
+        <a href="pages/experience.html"><i class="fa-solid fa-bolt"></i> Experience</a>
+        <a href="pages/shop.html"><i class="fa-solid fa-bag-shopping"></i> Shop</a>
+        <a href="pages/about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+        <a href="pages/contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+        <hr class="mobile-only">
+        <a href="pages/home-v2.html" class="mobile-only v2-link">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Try V2 Design
+        </a>
+        <a href="pages/login.html" class="mobile-only login-link">
+          <i class="fa-solid fa-user"></i> Login
+        </a>
+      </div>
+
+      <div class="nav-controls">
+        <a href="pages/home-v2.html" class="nav-btn alt-design desktop-only">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> V2 Design
+        </a>
+        <a href="pages/login.html" class="nav-icon desktop-only" aria-label="Login">
+          <i class="fa-solid fa-user"></i>
+        </a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">
+          <i class="fa-solid fa-right-left"></i>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO CINEMATIC ===== -->
+  <section class="hero-cinematic" id="hero">
+    <div class="hero-content">
+      <h1>LAUGHIX</h1>
+      <p class="tagline">Laugh Hard. Live Louder.</p>
+      <div class="hero-buttons">
+        <a href="pages/shows.html" class="btn btn-primary">
+          <i class="fa-solid fa-ticket"></i> Get Tickets
+        </a>
+        <a href="pages/shows.html" class="btn btn-outline">
+          <i class="fa-solid fa-compass"></i> Explore Shows
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED SHOWS ===== -->
+  <section class="featured-shows" id="featured">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="label">Upcoming Shows</span>
+        <h2>Next on Stage</h2>
+        <p>Don't miss these upcoming stops on the global tour. Tickets are selling fast.</p>
+      </div>
+
+      <div class="shows-grid" id="featured-shows-grid">
+        <!-- Dynamically rendered by JS -->
+      </div>
+
+      <div class="text-center mt-4" data-aos="fade-up">
+        <a href="pages/shows.html" class="btn btn-outline">
+          <i class="fa-solid fa-arrow-right"></i> View All Shows
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE EXPERIENCE (FEATURES) ===== -->
+  <section class="features-highlights" id="experience-highlights">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="label">Why Laughix?</span>
+        <h2>Beyond the Mic</h2>
+        <p>It's more than just a comedy show. It's an immersive production designed to blow your mind.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon">
+            <i class="fa-solid fa-bolt-lightning"></i>
+          </div>
+          <h3>Electric Energy</h3>
+          <p>High-octane performances that keep you on the edge of your seat from start to finish.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon">
+            <i class="fa-solid fa-microphone-lines"></i>
+          </div>
+          <h3>Interactive Set</h3>
+          <p>Unscripted crowd work and spontaneous moments that make every single show unique.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon">
+            <i class="fa-solid fa-earth-americas"></i>
+          </div>
+          <h3>Global Community</h3>
+          <p>Join a worldwide movement of fans who value laughter as the ultimate connector.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h3>VIP Experience</h3>
+          <p>From front-row seats to exclusive meet-and-greets, we redefine comedy luxury.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-icon">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <h3>Award Winning</h3>
+          <p>Voted "Best Live Comedy Experience" by fans and critics alike for 2024.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3>Unforgettable Vibes</h3>
+          <p>Immersive lighting and sound design that transform a show into an event you'll never forget.</p>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+  <!-- ===== STATS ===== -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="label">Metrics of Laughter</span>
+        <h2>The Global Impact</h2>
+        <p>Breaking records and spreading joy across every continent, one city at a time.</p>
+      </div>
+      <div class="stats-grid">
+
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Cities Worldwide</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number">1M+</div>
+          <div class="stat-label">Tickets Sold</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Shows Performed</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number">4.9★</div>
+          <div class="stat-label">Audience Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="home-testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="label">Social Proof</span>
+        <h2>What People Are Saying</h2>
+        <p>Real reactions from fans across the world.</p>
+      </div>
+
+      <div class="home-testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="home-testimonial-card" data-aos="fade-up" data-aos-delay="0">
+          <span class="ht-quote">"</span>
+          <div class="ht-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote>"The energy was unreal. I laughed non-stop for two hours straight."</blockquote>
+          <div class="ht-author">
+            <div class="ht-avatar">ER</div>
+            <div class="ht-author-info">
+              <h4>Emily R.</h4>
+              <span>New York</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="home-testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="ht-quote">"</span>
+          <div class="ht-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote>"Laughix delivers a performance that feels alive, bold, and unforgettable."</blockquote>
+          <div class="ht-author">
+            <div class="ht-avatar">DM</div>
+            <div class="ht-author-info">
+              <h4>Daniel M.</h4>
+              <span>London</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="home-testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="ht-quote">"</span>
+          <div class="ht-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote>"Hands down the best live comedy experience I've ever attended."</blockquote>
+          <div class="ht-author">
+            <div class="ht-avatar">SL</div>
+            <div class="ht-author-info">
+              <h4>Sofia L.</h4>
+              <span>Toronto</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED IN ===== -->
+  <section class="featured-in-section" id="featured-in">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="label">Press</span>
+        <h2>Featured In</h2>
+      </div>
+
+      <div class="featured-in-strip" data-aos="fade-up" data-aos-delay="100">
+        <a href="https://www.netflix.com" target="_blank" rel="noopener noreferrer" class="featured-in-item">
+          <i class="fa-solid fa-n"></i> Netflix
+        </a>
+        <div class="featured-in-divider"></div>
+        <a href="https://www.cc.com" target="_blank" rel="noopener noreferrer" class="featured-in-item">
+          <i class="fa-solid fa-tv"></i> Comedy Central
+        </a>
+        <div class="featured-in-divider"></div>
+        <a href="https://www.bbc.com" target="_blank" rel="noopener noreferrer" class="featured-in-item">
+          <i class="fa-solid fa-radio"></i> BBC
+        </a>
+        <div class="featured-in-divider"></div>
+        <a href="https://www.rollingstone.com" target="_blank" rel="noopener noreferrer" class="featured-in-item">
+          <i class="fa-solid fa-newspaper"></i> Rolling Stone
+        </a>
+        <div class="featured-in-divider"></div>
+        <a href="https://www.hbo.com" target="_blank" rel="noopener noreferrer" class="featured-in-item">
+          <i class="fa-solid fa-film"></i> HBO
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-box" data-aos="zoom-in">
+        <h2>Ready to Laugh?</h2>
+        <p>Join thousands of fans worldwide and experience the most talked-about comedy tour of the year.</p>
+        <a href="pages/shows.html" class="btn">
+          <i class="fa-solid fa-ticket"></i> Book Your Tickets Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-box" data-aos="fade-up">
+        <h2>Stay in the Loop</h2>
+        <p>Get exclusive tour updates, early access to tickets, and behind-the-scenes content.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-brand">
+            <img src="assets/images/logo/logo-main.png" alt="LAUGHIX Logo" class="brand-logo">
+            LAUGHIX
+          </a>
+          <p>High-energy stand-up comedy touring across the world. Laugh Hard. Live Louder.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col-quick">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="pages/shows.html">Shows</a>
+          <a href="pages/experience.html">Experience</a>
+          <a href="pages/shop.html">Shop</a>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div class="footer-col-company">
+          <h4>Company</h4>
+          <a href="pages/about.html">About Us</a>
+          <a href="pages/contact.html">Contact</a>
+          <a href="pages/coming-soon.html">Coming Soon</a>
+          <a href="pages/404.html">404 Error</a>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p class="footer-newsletter-text">Get updates on new tour dates, exclusive shows, and merch drops.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email Address" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 LAUGHIX. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
