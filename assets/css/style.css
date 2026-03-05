@@ -2650,6 +2650,19 @@ section {
         text-decoration: none;
         color: #FFFFFF !important;
         /* Ensure logo text is white */
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .nav-logo.mobile-only::after {
+        display: none !important;
+    }
+
+    .nav-logo.mobile-only:hover,
+    .nav-logo.mobile-only.active {
+        background: transparent !important;
+        border: none !important;
+        opacity: 1 !important;
     }
 
     .nav-logo img {
@@ -2694,8 +2707,8 @@ section {
         color: #00D4FF;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
+    .nav-links a:not(.nav-logo):hover,
+    .nav-links a:not(.nav-logo).active {
         background: rgba(124, 58, 237, 0.2);
         color: #FFFFFF !important;
         opacity: 1;
@@ -4840,6 +4853,10 @@ section {
         align-items: center;
     }
 
+    .cta-box .btn {
+        align-self: center;
+    }
+
     .cta-stats-row {
         justify-content: center;
         flex-wrap: wrap;
@@ -4865,6 +4882,24 @@ section {
         font-size: 2rem;
     }
 
+    .support-text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-cta-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-cta-content .btn {
+        align-self: center;
+    }
+
     .support-options {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -4881,6 +4916,12 @@ section {
 
     .merch-cta-content {
         padding: 30px 15px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .merch-cta-content .btn {
+        align-self: center;
     }
 
     .merch-cta-content h2 {

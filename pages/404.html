@@ -47,6 +47,14 @@
             margin-bottom: 30px;
             opacity: 0.9;
             text-transform: uppercase;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .brand-name:hover {
+            opacity: 1;
+            transform: scale(1.02);
+            filter: brightness(1.2);
         }
 
         .brand-logo {
@@ -185,10 +193,10 @@
     <div class="futuristic-circle" style="width: 700px; animation-duration: 30s; animation-direction: reverse;"></div>
 
     <div class="error-page">
-        <div class="brand-name">
+        <a href="../index.html" class="brand-name">
             <img src="../assets/images/logo/logo-main.png" alt="LAUGHIX Logo" class="brand-logo">
             LAUGHIX
-        </div>
+        </a>
         <div class="error-code">404</div>
         <div class="error-message">
             <h1>Oops! The joke's on us.</h1>
