@@ -114,7 +114,7 @@ const merchItems = [
     name: "Laughix Tour Tee",
     price: "$35",
     badge: "Best Seller",
-    description: "Premium cotton tour t-shirt with glow-in-the-dark logo.",
+    description: "Premium cotton tour t-shirt with dark logo.",
     image: "tshirt.jpg"
   },
   {
@@ -146,7 +146,7 @@ const merchItems = [
     name: "Laughix Mug",
     price: "$22",
     badge: "",
-    description: "Ceramic mug with heat-reactive color change.",
+    description: "Ceramic mug with heat-reactive color.",
     image: "Laughix Mug.jpg"
   },
   {
@@ -176,11 +176,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ---- Theme Toggle ----
 function initThemeToggle() {
+  // Always initialize theme from storage FIRST, regardless of toggle existence
+  const savedTheme = localStorage.getItem('laughix-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+
   const toggleBtn = document.getElementById('theme-toggle');
   if (!toggleBtn) return;
 
-  const savedTheme = localStorage.getItem('laughix-theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(toggleBtn, savedTheme);
 
   toggleBtn.addEventListener('click', () => {
@@ -298,7 +300,7 @@ function renderTourShows() {
 
   const pathPrefix = window.location.pathname.includes('/pages/') ? '../assets/images/shows/' : 'assets/images/shows/';
 
-  container.innerHTML = tourShows.slice(0, 6).map(show => {
+  container.innerHTML = tourShows.slice(3, 6).map(show => {
     const dateFormatted = new Date(show.date).toLocaleDateString('en-US', {
       weekday: 'short',
       month: 'short',

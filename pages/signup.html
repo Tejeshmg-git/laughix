@@ -19,265 +19,342 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <style>
-        html,
-        body {
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        @media (min-width: 769px) {
-
-            html,
-            body {
-                height: 100vh;
-                overflow: hidden;
-            }
-        }
-
-        .signup-page {
+        .auth-page {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 80px 20px 40px;
+            padding: 40px 20px;
             position: relative;
+            background: var(--bg-primary);
         }
 
-        .signup-container {
-            max-width: 450px;
-            width: 100%;
-            background: var(--bg-secondary);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--border-radius-lg);
-            padding: 36px 40px;
-            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
-            position: relative;
-            z-index: 10;
-        }
-
-        @media (min-width: 769px) {
-            .signup-container {
-                max-height: 90vh;
-                overflow-y: auto;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
-            }
-
-            .signup-container::-webkit-scrollbar {
-                display: none;
-            }
-        }
-
-        .signup-header {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-
-        .signup-header .brand-name {
+        .auth-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
             display: flex;
-            align-items: center;
-            justify-content: center;
             gap: 12px;
-            margin-bottom: 16px;
-            text-decoration: none;
+            z-index: 100;
         }
 
-        .signup-header .brand-logo {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            filter: drop-shadow(0 0 15px rgba(124, 58, 237, 0.5));
+        [dir="rtl"] .auth-controls {
+            right: auto;
+            left: 20px;
         }
 
-        .signup-header h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 0;
-        }
-
-        .signup-header p {
-            color: var(--text-secondary);
-        }
-
-        .signup-form .form-group {
-            margin-bottom: 20px;
-        }
-
-        .signup-form .form-row {
-            display: flex;
-            gap: 16px;
-        }
-
-        .signup-form .form-row .form-group {
-            flex: 1;
-        }
-
-        .signup-form label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            color: var(--text-primary);
-            font-weight: 500;
-        }
-
-        .signup-form input {
-            width: 100%;
-            padding: 14px 18px;
-            background: rgba(255, 255, 255, 0.05);
+        .auth-controls .control-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--bg-card);
             border: 1px solid var(--glass-border);
-            border-radius: var(--border-radius);
             color: var(--text-primary);
-            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
             transition: var(--transition);
         }
 
-        .signup-form input:focus {
-            outline: none;
+        .auth-controls .control-btn:hover {
             border-color: var(--accent-blue);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 0 0 4px rgba(0, 242, 255, 0.1);
+            box-shadow: var(--glow-blue);
+            transform: translateY(-2px);
         }
 
-        .terms-check {
+        .back-to-home {
+            position: fixed;
+            top: 20px;
+            left: 20px;
             display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 28px;
-            font-size: 0.85rem;
+            align-items: center;
+            gap: 8px;
             color: var(--text-secondary);
-            line-height: 1.5;
+            font-size: 0.9rem;
+            font-weight: 500;
+            z-index: 100;
+            transition: var(--transition);
         }
 
-        .terms-check input {
-            width: auto;
-            margin-top: 3px;
+        [dir="rtl"] .back-to-home {
+            left: auto;
+            right: 20px;
         }
 
-        .terms-check a {
+        [dir="rtl"] .back-to-home i {
+            transform: rotate(180deg);
+        }
+
+        .back-to-home:hover {
             color: var(--accent-blue);
+            transform: translateX(-5px);
+        }
+
+        [dir="rtl"] .back-to-home:hover {
+            transform: translateX(5px);
+        }
+
+        .auth-card {
+            max-width: 480px;
+            width: 100%;
+            background: var(--bg-secondary);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            backdrop-filter: blur(20px);
+        }
+
+        .auth-header {
+            margin-bottom: 32px;
+        }
+
+        .auth-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 24px;
             text-decoration: none;
         }
 
-        .terms-check a:hover {
-            text-decoration: underline;
+        .auth-logo img {
+            width: 40px;
+            height: 40px;
         }
 
-        .signup-btn {
-            width: 100%;
-            padding: 16px;
-            font-size: 1.1rem;
+        .auth-logo span {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: 1px;
+        }
+
+        .auth-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .auth-header p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        .social-auth {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
             margin-bottom: 24px;
-            justify-content: center;
-        }
-
-        .social-login {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 32px;
         }
 
         .social-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            width: 100%;
+            gap: 10px;
             padding: 12px;
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--bg-primary);
             border: 1px solid var(--glass-border);
-            border-radius: var(--border-radius);
+            border-radius: 12px;
             color: var(--text-primary);
-            font-size: 0.9rem;
-            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
             transition: var(--transition);
         }
 
         .social-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
             transform: translateY(-2px);
         }
 
-        .signup-footer {
-            text-align: center;
-            margin-top: 28px;
-            color: var(--text-secondary);
+        .auth-divider {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 24px 0;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .auth-divider::before,
+        .auth-divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--glass-border);
+        }
+
+        .auth-form {
+            text-align: left;
+        }
+
+        [dir="rtl"] .auth-form {
+            text-align: right;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .auth-form input {
+            width: 100%;
+            padding: 14px 16px;
+            background: var(--bg-primary);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .auth-form input:focus {
+            border-color: var(--accent-blue);
+            box-shadow: var(--glow-blue);
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        [dir="rtl"] .toggle-password {
+            right: auto;
+            left: 16px;
+        }
+
+        .toggle-password:hover {
+            color: var(--text-primary);
+        }
+
+        .form-extra {
+            margin-bottom: 32px;
             font-size: 0.9rem;
         }
 
-        .signup-footer a {
-            color: var(--accent-blue);
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .signup-footer a:hover {
-            text-decoration: underline;
-        }
-
-        .back-to-home {
-            position: absolute;
-            top: 40px;
-            left: 40px;
+        .terms-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
             color: var(--text-secondary);
-            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .terms-check input {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+
+        .terms-check a {
+            color: var(--accent-orange);
+            font-weight: 600;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 24px;
             display: flex;
             align-items: center;
-            gap: 8px;
-            transition: var(--transition);
-            z-index: 100;
+            justify-content: center;
         }
 
-        .back-to-home:hover {
-            color: var(--text-primary);
-            transform: translateX(-5px);
+        .auth-footer {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
         }
 
-        @media (max-width: 500px) {
+        .auth-link {
+            color: var(--accent-orange);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* --- Theme Colors --- */
+        [data-theme="light"] .auth-card {
+            background: var(--bg-secondary);
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="light"] .social-btn {
+            background: #fff;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .auth-card {
+                padding: 32px 24px;
+            }
+
+            .auth-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-auth {
+                grid-template-columns: 1fr;
+            }
+
+            .auth-controls {
+                top: 10px;
+                right: 10px;
+            }
+
+            [dir="rtl"] .auth-controls {
+                left: 10px;
+            }
+
             .back-to-home {
-                top: 20px;
-                left: 20px;
-                font-size: 0.85rem;
+                top: 15px;
+                left: 10px;
             }
 
-            .signup-container {
-                padding: 32px 20px;
-                max-height: none;
+            [dir="rtl"] .back-to-home {
+                right: 10px;
             }
 
-            .signup-header {
-                margin-bottom: 24px;
+            .auth-header h2 {
+                font-size: 1.6rem;
             }
 
-            .signup-header h1 {
-                font-size: 2rem;
+            .auth-card {
+                border-radius: 16px;
             }
+        }
 
-            .signup-header .brand-logo {
-                width: 40px;
-                height: 40px;
-            }
-
-            .signup-form .form-row {
-                flex-direction: column;
-                gap: 0;
-            }
-
-            .signup-btn {
-                padding: 12px;
-                font-size: 1.05rem;
-                border-radius: var(--border-radius);
-            }
-
-            .social-btn {
-                padding: 10px;
-                font-size: 0.85rem;
+        @media (max-width: 320px) {
+            .auth-card {
+                padding: 24px 16px;
             }
         }
     </style>
@@ -287,31 +364,41 @@
     <!-- Animated Background -->
     <div class="animated-bg"></div>
 
+    <div class="auth-controls">
+        <button class="control-btn" id="theme-toggle" title="Toggle Theme">
+            <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="control-btn" id="rtl-toggle" title="Toggle RTL">
+            <i class="fa-solid fa-right-left"></i>
+        </button>
+    </div>
+
     <a href="../index.html" class="back-to-home">
         <i class="fa-solid fa-arrow-left"></i> Back to Home
     </a>
 
-    <div class="signup-page">
-        <div class="signup-container" data-aos="zoom-in">
-            <div class="signup-header">
-                <a href="../index.html" class="brand-name">
-                    <img src="../assets/images/logo/logo-main.png" alt="LAUGHIX Logo" class="brand-logo">
-                    <h1>LAUGHIX</h1>
+    <div class="auth-page">
+        <div class="auth-card" data-aos="zoom-in">
+            <header class="auth-header">
+                <a href="../index.html" class="auth-logo">
+                    <img src="../assets/images/logo/logo-main.png" alt="Logo" class="brand-logo">
+                    <span>LAUGHIX</span>
                 </a>
-                <p>Join the comedy revolution.</p>
+                <h2>Create <span class="highlight">Account</span> 🚀</h2>
+                <p>Join the comedy revolution and catch all shows.</p>
+            </header>
+
+            <div class="social-auth">
+                <button class="social-btn"><i class="fa-brands fa-google"></i> Google</button>
+                <button class="social-btn"><i class="fa-brands fa-apple"></i> Apple</button>
             </div>
 
-            <form class="signup-form"
-                onsubmit="event.preventDefault(); alert('🎉 Account created! Welcome to LAUGHIX!')">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" placeholder="John" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" placeholder="Doe" required>
-                    </div>
+            <div class="auth-divider">OR</div>
+
+            <form class="auth-form" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" placeholder="John Doe" required>
                 </div>
 
                 <div class="form-group">
@@ -321,52 +408,50 @@
 
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Min. 8 characters" required minlength="8">
+                    <div class="input-wrapper">
+                        <input type="password" id="password" placeholder="••••••••" required>
+                        <i class="fa-solid fa-eye-slash toggle-password"></i>
+                    </div>
                 </div>
 
                 <div class="form-group">
                     <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" placeholder="Re-enter your password" required
-                        minlength="8">
+                    <div class="input-wrapper">
+                        <input type="password" id="confirm-password" placeholder="••••••••" required>
+                        <i class="fa-solid fa-eye-slash toggle-password"></i>
+                    </div>
                 </div>
 
-                <label class="terms-check">
-                    <input type="checkbox" required>
-                    <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
-                </label>
-
-                <button type="submit" class="btn btn-primary signup-btn">
-                    Create Account
-                </button>
-
-                <div class="divider" style="display: flex; align-items: center; gap: 10px; margin: 24px 0;">
-                    <span style="flex: 1; height: 1px; background: var(--glass-border);"></span>
-                    <span style="font-size: 0.8rem; color: var(--text-muted);">OR</span>
-                    <span style="flex: 1; height: 1px; background: var(--glass-border);"></span>
+                <div class="form-extra">
+                    <label class="terms-check">
+                        <input type="checkbox" required>
+                        <span>I agree to <a href="#">Terms & Conditions</a> and the <a href="#">Privacy Policy</a>.</span>
+                    </label>
                 </div>
 
-                <div class="social-login">
-                    <button type="button" class="social-btn">
-                        <i class="fa-brands fa-google"></i> Sign up with Google
-                    </button>
-                    <button type="button" class="social-btn">
-                        <i class="fa-brands fa-apple"></i> Sign up with Apple
-                    </button>
-                </div>
+                <button type="submit" class="btn btn-primary submit-btn">Sign Up</button>
             </form>
 
-            <div class="signup-footer">
-                Already have an account? <a href="login.html">Sign In</a>
+            <div class="auth-footer">
+                Already have an account? <a href="login.html" class="auth-link">Login</a>
             </div>
         </div>
     </div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../assets/js/script.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true
+        // Password Toggle Logic
+        const toggles = document.querySelectorAll('.toggle-password');
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', function () {
+                const input = this.previousElementSibling;
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
+                this.classList.toggle('fa-eye');
+                this.classList.toggle('fa-eye-slash');
+            });
         });
     </script>
 </body>
